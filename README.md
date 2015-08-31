@@ -1,4 +1,6 @@
-### Node Boilerplate
+### Whatsgood 
+
+Steps 1 - 7 are same as node-boilerplate. 
 
 1. Create package.json 
 	
@@ -80,3 +82,25 @@ index : function(req, res){
 app.get('/index', AppController.index);
 
 ```
+
+8. Angularized the app 
+	1. Add script, include
+	2. Create `main.js`
+
+9. Make kimono talk with angular
+	1. See the tutorial link. Walk through the steps here, write them down like a PRD
+
+```
+app.controller('MainCtrl', function($scope, $http){
+		$scope.myMessage = "Hey what's good SF";
+
+		url = "https://www.kimonolabs.com/api/21hty48u?apikey=1YZePuACbhVc04ySCO2m9KvBBQmc6flD&callback=JSON_CALLBACK";
+ 		$http.jsonp(url).
+
+ 		success(function(data){
+ 			$scope.mezzData = data['results']['MezzanineSF'];
+ 		})
+});
+```
+
+10. added bootstrap 

@@ -1,5 +1,24 @@
 extend ./layout
 
 block content
-	h1= title
-	p This is the index page for node boilerplate
+	.row
+		.col-md-12
+			.row
+				.col-md-12
+					h1= title
+			//- .row(ng-repeat='mezz in mezzData')
+			//- 	.col-md-12 
+			//- 		h2 Today's Event
+			//- 		p Date : {{mezz.date}}
+			//- 		p Artist : {{mezz.artist}}
+			//- 		p Link : {{mezz.link.href}}
+			//- 		p Price : {{mezz.price}}
+			//- 		p Image : {{mezz.image.src}}
+			.row
+				.col-md-12 
+					h2 Mezzanine SF
+					p Date : {{mezzData[0].date}}
+					p Artist : {{mezzData[0].artist}}
+					p Link : {{mezzData[0].link.href}}
+					p Price : {{mezzData[0].price}}
+					p Image : {{mezzData[0].image.src}}
