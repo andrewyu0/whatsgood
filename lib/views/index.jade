@@ -1,24 +1,41 @@
 extend ./layout
 
 block content
-	.row
-		.col-md-12
-			.row
-				.col-md-12
-					h1= title
-			//- .row(ng-repeat='mezz in mezzData')
-			//- 	.col-md-12 
-			//- 		h2 Today's Event
-			//- 		p Date : {{mezz.date}}
-			//- 		p Artist : {{mezz.artist}}
-			//- 		p Link : {{mezz.link.href}}
-			//- 		p Price : {{mezz.price}}
-			//- 		p Image : {{mezz.image.src}}
-			.row
-				.col-md-12 
-					h2 Mezzanine SF
-					p Date : {{mezzData[0].date}}
-					p Artist : {{mezzData[0].artist}}
-					p Link : {{mezzData[0].link.href}}
-					p Price : {{mezzData[0].price}}
-					p Image : {{mezzData[0].image.src}}
+  .row
+    .col-md-12(style="padding-left:100px;")
+      .row
+        .col-md-12
+          h1(style="color:blue;") What's Good SF
+      .row
+        .col-sm-4
+          h2 Mezzanine SF
+          a(href="/mezz3") Next 3 events
+          a(href="{{mezzData[0].artist.href}}")
+            img(src="{{mezzData[0].image.src}}" style="max-width:200px;")
+          p Date : {{mezzData[0].date}}
+          p Artist : {{mezzData[0].artist.text}}
+          p Tickets : 
+            a(href="{{mezzData[0].link.href}}") Link here
+          p Price : {{mezzData[0].price}}
+        .col-sm-4
+          h2 Audio SF
+          a Next 3 events
+          a(href="{{audioData[0].image.href}}")
+            img(src="{{audioData[0].image.src}}" style="max-width:200px;")
+          p Date : {{audioData[0].date.text}}
+          p Artist : {{audioData[0].artist.text}}
+          p Tickets : 
+            a(href="{{audioData[0].link.href}}") Link here
+          p Price : {{audioData[0].price}}
+  .row
+    .col-md-12
+      .sk-cube-grid
+        .sk-cube.sk-cube1
+        .sk-cube.sk-cube2
+        .sk-cube.sk-cube3
+        .sk-cube.sk-cube4
+        .sk-cube.sk-cube5
+        .sk-cube.sk-cube6
+        .sk-cube.sk-cube7
+        .sk-cube.sk-cube8
+        .sk-cube.sk-cube9

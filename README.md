@@ -103,4 +103,49 @@ app.controller('MainCtrl', function($scope, $http){
 });
 ```
 
+@TODO Look into whats going on it json.p
+* check out this post http://stackoverflow.com/questions/12066002/parsing-jsonp-http-jsonp-response-in-angular-js
+
 10. added bootstrap 
+
+11. added function to generate API url key
+```
+// Creates API urls
+var generateAPIurl = function(urlParam){
+	return "https://www.kimonolabs.com/api/" + urlParam + "?apikey=1YZePuACbhVc04ySCO2m9KvBBQmc6flD&callback=JSON_CALLBACK";
+};
+```
+
+12. Date filter
+	* As a user, I want to see today's date, and the events that match today's date
+	* As a user, if a venue does not have any events today, I want to see the next one coming up (?)
+		* Maybe have it show the one from before? At least something that says "NO EVENT TODAY - next event is: "
+
+
+@issue - every site is different. Format them all in some way? Would hate to do it all in the angular controller.
+
+
+13. Add styling 
+`lib/styles/main.css`
+
+14. Added spinkit 
+
+15. Next 3 functionality 
+
+```
+// in routes
+	app.get('/mezz3', AppController.mezz3);
+
+// in controller
+	mezz3 : function(req, res){
+		res.render('mezz3');
+	}
+	
+```
+____________
+
+
+@TODO Features
+
+* Map/List view toggle
+* 
