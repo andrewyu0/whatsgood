@@ -140,7 +140,7 @@ var generateAPIurl = function(urlParam){
 	mezz3 : function(req, res){
 		res.render('mezz3');
 	}
-	
+
 ```
 ____________
 
@@ -148,4 +148,11 @@ ____________
 @TODO Features
 
 * Map/List view toggle
-* 
+* Suggestions for additional venues, etc? email suggestions@whatsgoodsf.com
+* music venue event aggregator, focus on dancing 
+* a nice header/footer: style them well
+* Main Page
+	* Whats good today (more difficult)
+	* whats upcoming 
+* filter functionality overall
+* material design
