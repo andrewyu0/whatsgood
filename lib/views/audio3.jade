@@ -1,0 +1,25 @@
+extend ./layout
+
+block content
+  .row
+    .col-md-12(style="padding-left:100px;")
+      .row 
+        .col-md-12
+          h1 Next 3 Audio SF shows
+      .event-card(ng-repeat="audio in audioData | limitTo: 3")
+        .row 
+          .col-sm-4
+            div     
+              h2 Audio SF       
+              a(href="{{audio.image.href}}")
+                img(src="{{audio.image.src}}" style="max-width:200px;")
+          .col-sm-8
+            .artist-info
+              p Date : {{audio.date.text}}
+              p Artist : {{audio.artist.text}}
+              p Tickets : 
+                a(href="{{audio.link.href}}") Link here
+              p Price : {{audio.price}}    
+      .row
+        .col-md-12
+          a(href="/") Back

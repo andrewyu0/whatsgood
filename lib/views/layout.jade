@@ -1,11 +1,13 @@
 html(ng-app='myApp')
   head
     title= 'Whatsgood'
+    meta(name="viewport" content="width=device-width, user-scalable=0")
     script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js')
     script(src='js/main.js')    
     link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet")
     link(href="styles/main.css", rel="stylesheet")
-  body(ng-controller="MainCtrl")
-  header WHATSGOOD HEADER
+
+  body(ng-controller="MainCtrl" ontouchstart="")
+  header
     block content
-  footer THIS IS A FOOTER
+  //- footer THIS IS A FOOTER

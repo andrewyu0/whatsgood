@@ -2,30 +2,104 @@ extend ./layout
 
 block content
   .row
-    .col-md-12
-      .test-div
-  .row
-    .col-md-12(style="padding-left:100px;")
-      .row
-        .col-md-12
-          h1(style="color:blue;") This is whats good today
+    .col-md-8.col-md-offset-2.col-xs-12
+      .title whatsgoodsf?
+        p.subtext Upcoming events at go-to music venues 
+      //- .event-card(onclick="location.href='{{mezzData[0].artist.href}}';")      
       .event-card
+        .row 
+          .col-xs-12
+            .venue-name MEZZANINE SF
         .row
-          .col-sm-4
-            h2 Mezzanine SF
-            div
-              a(href="/mezz3") Next 3 events
+          .col-sm-4.col-xs-3
             div
               a(href="{{mezzData[0].artist.href}}")
-                img(src="{{mezzData[0].image.src}}" style="max-width:200px;")            
-          .col-sm-8
-            .artist-info
-              p Date : {{mezzData[0].date}}
-              p Artist : {{mezzData[0].artist.text}}
-              p Tickets : 
-                a(href="{{mezzData[0].link.href}}") Link here
-              p Price : {{mezzData[0].price}}
+                img.venue-img(src="{{mezzData[0].image.src}}")            
+          .col-sm-8.col-xs-9
+            .venue-info
+              .row
+                .col-xs-3
+                  p DATE 
+                .col-xs-9
+                  {{mezzData[0].date}}
+              .row
+                .col-xs-3
+                  p ARTIST
+                .col-xs-9
+                  {{mezzData[0].artist.text}}
+              .row
+                .col-xs-3
+                  p PRICE
+                .col-xs-9
+                  {{mezzData[0].price}}
+      .row
+        .col-xs-12
+          .next-three.center
+            a(href="/mezz3") Next 3 events for Mezzanine
       .event-card
+        .row 
+          .col-xs-12
+            .venue-name AUDIO SF
+        .row
+          .col-sm-4.col-xs-3
+            div
+              a(href="{{mezzData[0].artist.href}}")
+                img.venue-img(src="{{audioData[0].image.src}}")            
+          .col-sm-8.col-xs-9
+            .venue-info
+              .row
+                .col-xs-3
+                  p DATE 
+                .col-xs-9
+                  {{mezzData[0].date}}
+              .row
+                .col-xs-3
+                  p ARTIST
+                .col-xs-9
+                  {{mezzData[0].artist.text}}
+              .row
+                .col-xs-3
+                  p PRICE
+                .col-xs-9
+                  {{mezzData[0].price}}
+      .row
+        .col-xs-12
+          .next-three.center
+            a(href="/mezz3") Next 3 events for Audio SF
+      .event-card
+        .row 
+          .col-xs-12
+            .venue-name INDEPENDENT
+        .row
+          .col-sm-4.col-xs-3
+            div
+              a(href="{{mezzData[0].artist.href}}")
+                img.venue-img(src="{{mezzData[0].image.src}}")            
+          .col-sm-8.col-xs-9
+            .venue-info
+              .row
+                .col-xs-3
+                  p DATE 
+                .col-xs-9
+                  {{mezzData[0].date}}
+              .row
+                .col-xs-3
+                  p ARTIST
+                .col-xs-9
+                  {{mezzData[0].artist.text}}
+              .row
+                .col-xs-3
+                  p PRICE
+                .col-xs-9
+                  {{mezzData[0].price}}
+      .row
+        .col-xs-12
+          .next-three.center
+            a(href="/mezz3") Next 3 events for Mezzanine
+      
+
+
+      .event-card(onclick="location.href='{{audioData[0].image.href}}';")
         .row 
           .col-sm-4
             div     
@@ -36,13 +110,13 @@ block content
             .artist-info
               p Date : {{audioData[0].date.text}}
               p Artist : {{audioData[0].artist.text}}
-              p Tickets : 
-                a(href="{{audioData[0].link.href}}") Link here
-              p Price : {{audioData[0].price}}
+              //- p Tickets : 
+                //- a(href="{{audioData[0].link.href}}") Link here
+              p Price : {{audioData[0].price}}    
+      .row
         .col-sm-12
-          h4 something
-        .col-sm-12
-          h4 something          
+          .next-three.center
+            a(href="/audio3") Next 3 events for AudioSF               
   //- .row
   //-   .col-md-12
   //-     .sk-cube-grid

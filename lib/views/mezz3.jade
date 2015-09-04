@@ -1,0 +1,27 @@
+extend ./layout
+
+block content
+  .row
+    .col-md-12(style="padding-left:100px;")
+      .row 
+        .col-md-12
+          h1 Next 3 mezz shows
+      .event-card(ng-repeat="mezz in mezzData | limitTo: 3")
+        .row
+          .col-sm-4
+            h2 Mezzanine SF
+            div
+              a(href="/mezz3") Next 3 events
+            div
+              a(href="{{mezz.artist.href}}")
+                img(src="{{mezz.image.src}}" style="max-width:200px;")            
+          .col-sm-8
+            .artist-info
+              p Date : {{mezz.date}}
+              p Artist : {{mezz.artist.text}}
+              p Tickets : 
+                a(href="{{mezz.link.href}}") Link here
+              p Price : {{mezz.price}}
+      .row
+        .col-md-12
+          a(href="/") Back

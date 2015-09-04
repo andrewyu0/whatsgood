@@ -147,6 +147,7 @@ ____________
 
 @TODO Features
 
+these are moved to OneNote 9/1
 * Map/List view toggle
 * Suggestions for additional venues, etc? email suggestions@whatsgoodsf.com
 * music venue event aggregator, focus on dancing 
@@ -156,3 +157,4 @@ ____________
 	* whats upcoming 
 * filter functionality overall
 * material design
+end here 9/1 
