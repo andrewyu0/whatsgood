@@ -1,6 +1,9 @@
 {
-    "name"    : "node-boilerplate",
+    "name"    : "whatsgoodsf",
     "private" : true,
+    "scripts" : {
+    	"start" : "nodemon app.js"
+    },
     "dependencies" : {
         "express"  : "~4.2.0",
         "jade"     : "~1.3.0"
