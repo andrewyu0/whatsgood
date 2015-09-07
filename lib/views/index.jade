@@ -4,82 +4,36 @@ block content
   .row
     .col-md-8.col-md-offset-2.col-xs-12
       .title whatsgoodsf?
-        p.subtext Upcoming events at go-to music venues 
-      //- .event-card(onclick="location.href='{{mezzData[0].artist.href}}';")      
-      .event-card
+        p.subtext Upcoming events at go-to music venues       
+    .col-md-8.col-md-offset-2.col-xs-12(ng-repeat="venue in allVenues")      
+      .event-card(onclick="location.href='{{venue.data[0].url}}';")
         .row 
           .col-xs-12
-            .venue-name INDEPENDENT
+            .venue-name {{venue.collectionName}}
         .row
           .col-sm-4.col-xs-3
-            img.venue-img(src="{{indyData[0].image.src}}")            
+            img.venue-img(src="{{venue.data[0].image}}")            
           .col-sm-8.col-xs-9
             .venue-info
               .row
                 .col-xs-3
                   p DATE 
                 .col-xs-9
-                  {{mezzData[0].date}}
+                  {{venue.data[0].date}}
               .row
                 .col-xs-3
                   p ARTIST
                 .col-xs-9
-                  {{mezzData[0].artist.text}}
-              .row
+                  {{venue.data[0].artist}}
+              .row(ng-hide="venue.data[0].priceTime == null")
                 .col-xs-3
                   p PRICE
                 .col-xs-9
-                  {{mezzData[0].price}}
+                  {{venue.data[0].priceTime}}
       .row
         .col-xs-12
           .next-three.center
-            a(href="/mezz3") Next 3 events for Mezzanine
-      .event-card
-        .row 
-          .col-xs-12
-            .venue-name MEZZANINE SF
-        .row
-          .col-sm-4.col-xs-3
-            img.venue-img(src="{{mezzData[0].image.src}}")            
-          .col-sm-8.col-xs-9
-            .venue-info
-              .row
-                .col-xs-3
-                  p DATE 
-                .col-xs-9
-                  {{mezzData[0].date}}
-              .row
-                .col-xs-3
-                  p ARTIST
-                .col-xs-9
-                  {{mezzData[0].artist.text}}
-              .row
-                .col-xs-3
-                  p PRICE
-                .col-xs-9
-                  {{mezzData[0].price}}
-      .row
-        .col-xs-12
-          .next-three.center
-            a(href="/mezz3") Next 3 events for Mezzanine
-      .event-card(onclick="location.href='{{audioData[0].image.href}}';")
-        .row 
-          .col-sm-4
-            div     
-              h2 Audio SF       
-              a(href="{{audioData[0].image.href}}")
-                img(src="{{audioData[0].image.src}}" style="max-width:200px;")
-          .col-sm-8
-            .artist-info
-              p Date : {{audioData[0].date.text}}
-              p Artist : {{audioData[0].artist.text}}
-              //- p Tickets : 
-                //- a(href="{{audioData[0].link.href}}") Link here
-              p Price : {{audioData[0].price}}    
-      .row
-        .col-sm-12
-          .next-three.center
-            a(href="/audio3") Next 3 events for AudioSF               
+            a(href="/{{venue.collectionName}}") Next 3 events for {{venue.collectionName}}        
   //- .row
   //-   .col-md-12
   //-     .sk-cube-grid
