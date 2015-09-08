@@ -1,7 +1,21 @@
 extend ./layout
 
 block content
-  .row
+  .row(id='loading')
+    .col-md-12
+      div    
+        .sk-cube-grid
+          .sk-cube.sk-cube1
+          .sk-cube.sk-cube2
+          .sk-cube.sk-cube3
+          .sk-cube.sk-cube4
+          .sk-cube.sk-cube5
+          .sk-cube.sk-cube6
+          .sk-cube.sk-cube7
+          .sk-cube.sk-cube8
+          .sk-cube.sk-cube9
+        .title loading...
+  .row(id='content')
     .col-md-8.col-md-offset-2.col-xs-12
       .title whatsgoodsf?
         p.subtext Upcoming events at go-to music venues       
@@ -34,15 +48,3 @@ block content
         .col-xs-12
           .next-three.center
             a(href="/{{venue.collectionName}}") Next 3 events for {{venue.collectionName}}        
-  //- .row
-  //-   .col-md-12
-  //-     .sk-cube-grid
-  //-       .sk-cube.sk-cube1
-  //-       .sk-cube.sk-cube2
-  //-       .sk-cube.sk-cube3
-  //-       .sk-cube.sk-cube4
-  //-       .sk-cube.sk-cube5
-  //-       .sk-cube.sk-cube6
-  //-       .sk-cube.sk-cube7
-  //-       .sk-cube.sk-cube8
-  //-       .sk-cube.sk-cube9

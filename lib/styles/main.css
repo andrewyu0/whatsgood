@@ -8,9 +8,11 @@ body {
   color: rgb(117, 214, 195);
   background-color: black;
 }
-
 */
 
+#content {
+  display: none;
+}
 
 .center {
   text-align: center
@@ -93,9 +95,10 @@ a {
 
 /*spinkit*/
 .sk-cube-grid {
-  width: 80px;
-  height: 80px;
-  margin: 100px auto;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 200px;
 }
 
 .sk-cube-grid .sk-cube {
