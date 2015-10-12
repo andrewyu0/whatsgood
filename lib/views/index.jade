@@ -20,33 +20,36 @@ block content
       .title WHATSGOODSF?
       p.subtext Upcoming events at go-to music venues       
       p.subtext_2 Click on the event card for tickets
-      p.subtext_2 suggestions? email sup@whatsgoodsf.com
     .col-md-8.col-md-offset-2.col-xs-12(ng-repeat="venue in allVenues")      
       .event-card(onclick="location.href='{{venue.data[0].url}}';")
-        .row 
-          .col-xs-12
-            .venue-name {{venue.collectionName}}
         .row
           .col-sm-4.col-xs-3
-            img.venue-img(ng-src="{{venue.data[0].image}}" err-src="http://i.imgur.com/04pGPJ4.jpg")            
+            .img-container
+              img.venue-img(ng-src="{{venue.data[0].image}}" err-src="http://i.imgur.com/04pGPJ4.jpg")            
           .col-sm-8.col-xs-9
             .venue-info
-              .row
-                .col-xs-3
-                  p DATE 
-                .col-xs-9
-                  {{venue.data[0].date}}
+              .row 
+                .col-xs-12
+                  .venue-name {{venue.collectionName}}              
               .row
                 .col-xs-3
                   p ARTIST
                 .col-xs-9
                   {{venue.data[0].artist}}
+              .row(ng-hide="venue.data[0].date == null")
+                .col-xs-3
+                  p DATE 
+                .col-xs-9
+                  {{venue.data[0].date}}                  
               .row(ng-hide="venue.data[0].priceTime == null")
                 .col-xs-3
-                  p PRICE
+                  p INFO
                 .col-xs-9
                   {{venue.data[0].priceTime}}
       //- .row
       //-   .col-xs-12
       //-     .next-three.center
       //-       a(href="/{{venue.collectionName}}") Next 3 events for {{venue.collectionName}}        
+  .row
+    .col-xs-12
+      p.subtext_2.bottom-text suggestions? email sup@whatsgoodsf.com

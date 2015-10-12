@@ -29,6 +29,13 @@ body {
 }
 */
 
+footer {
+  color: rgb(117, 214, 195);
+  font-weight: bold;
+  -webkit-text-stroke: 0.15px black;
+  font-size: 20px;
+}
+
 #content {
   display: none;
 }
@@ -48,7 +55,7 @@ body {
 }
 
 .subtext {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: normal;
   color: black;
   text-align: center;
@@ -58,32 +65,35 @@ body {
 }
 
 .subtext_2 {
-  font-size: 10px;
+  font-size: 20px;
   font-weight: normal;
   color: black;
   text-align: center;
   margin: 0;
 }
 
+.bottom-text {
+  padding-top: 10px;
+}
+
 /*EVENT CARD STUFF*/
 
 .event-card {
   /*-webkit-text-stroke: 0.5px black;*/
+  animation: color_change_2 10s infinite alternate;
   text-transform: uppercase;
-    animation: color_change_2 10s infinite alternate;
-
   margin: 15 15 0 15;
   /*border: 1px solid;*/
   background-color: rgb(117, 214, 195);
   padding: 15px;
   /*box-shadow: 5px 5px 10px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
   -webkit-box-shadow: 10px 5px 22px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 5px 22px 0px rgba(0,0,0,0.75);
-box-shadow: 10px 5px 22px 0px rgba(0,0,0,0.75);
-  
+  -moz-box-shadow: 10px 5px 22px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 5px 22px 0px rgba(0,0,0,0.75);
   min-height: 280px;
   color: white;
   font-size: 20px;
+  border-radius: 25px;
 }
 
 .event-card:active {
@@ -104,8 +114,9 @@ box-shadow: 10px 5px 22px 0px rgba(0,0,0,0.75);
 }
 
 .venue-img {
-  max-width: 200px;
+  max-width: 100%;
   border-radius: 15px 20px 15px;
+  height: auto;
   /*border-radius:15px 50px 30px*/
 }
 
@@ -124,18 +135,6 @@ box-shadow: 10px 5px 22px 0px rgba(0,0,0,0.75);
 a {
   color: rgb(117, 214, 195);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*spinkit*/
 .sk-cube-grid {
@@ -201,8 +200,9 @@ a {
   } 
 }
 
-
-/*media queries*/
+/**********************/
+/*** MEDIA QUERIES ****/
+/**********************/
 
 
 @media only screen and (max-width: 480px){
@@ -211,19 +211,19 @@ a {
   } 
 
   .event-card {
-    margin: 15 15 0 15;
-    /*border: 1px solid;*/
+    /*margin: 15 15 0 15;
     background-color: rgb(117, 214, 195);
     padding: 15px;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 5px 5*/px 10px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     min-height: 140px;
-    color: white;
+    /*color: white;*/
     font-size: 12px;
   }
-
-  .venue-img {
-    max-width: 80px;
-  }
+/*
+  .img-container img {
+    width: 100%;
+    height: auto;
+  }*/
 
   .venue-info {
     padding: 0;
@@ -236,5 +236,13 @@ a {
     margin: 10;
     font-size: 18px;
   }  
+
+  .subtext {
+    font-size: 18px;
+  }
+
+  .subtext_2 {
+    font-size: 12px;
+  }
 
 }
