@@ -16,6 +16,7 @@
 
 body {
     background-color: rgb(190, 234, 226);
+    touch-action: pan-y;
     max-width: 100%;
     overflow-x: hidden;    
     animation: color_change 5s infinite alternate;
@@ -60,8 +61,17 @@ footer {
   color: black;
   text-align: center;
   margin: 0;
+}
 
-
+.index-warning {
+  color: #f07a60;
+  /*margin-bottom: 100px;*/
+  padding-bottom: 200px;
+  padding-top: 140px;
+  padding-left: 140px;
+  padding-right: 100px;
+  border-bottom: 5px solid #ccc;
+  text-align: center
 }
 
 .subtext_2 {
