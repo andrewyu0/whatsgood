@@ -20,6 +20,11 @@ block content
       .title WHATSGOODSF?
       p.subtext Upcoming events at go-to music venues       
       p.subtext_2 Click on the event card for tickets
+    .col-md-8.col-md-offset-2.col-xs-12
+      .index-warning
+        p Whatsgoodsf was powered by 
+          a(href="https://www.kimonolabs.com/") Kimonolabs
+          |, which recently shut down :( We are working on getting our services back up, thanks for your patience!
     .col-md-8.col-md-offset-2.col-xs-12(ng-repeat="venue in allVenues")      
       .event-card(onclick="location.href='{{venue.data[0].url}}';")
         .row
