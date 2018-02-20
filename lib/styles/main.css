@@ -1,11 +1,11 @@
-@-webkit-keyframes color_change  {
+/*@-webkit-keyframes color_change  {
   0% {background-color: #45CEEF;} 
   25% {background-color: #FFF5A5;}
   50% {background-color: #FFD4DA;}
   75% {background-color: #99D2E4;}
   100% {background-color: #D8CAB4;}
 }
-
+*/
 @-webkit-keyframes color_change_2  {
   0% {background-color: #45CEEF;} 
   25% {background-color: #6600FF;}
@@ -19,8 +19,9 @@ body {
     touch-action: pan-y;
     max-width: 100%;
     overflow-x: hidden;    
-    animation: color_change 5s infinite alternate;
-    font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+    animation: color_change 15s infinite alternate;
+    /*font-family: Futura, 'Trebuchet MS', Arial, sans-serif;*/
+    font-family: Avenir, 'Trebuchet MS', Arial, sans-serif;
 
 }
 
@@ -33,7 +34,7 @@ body {
 footer {
   color: rgb(117, 214, 195);
   font-weight: bold;
-  -webkit-text-stroke: 0.15px black;
+  /*-webkit-text-stroke: 0.15px black;*/
   font-size: 20px;
 }
 
@@ -47,7 +48,7 @@ footer {
 
 .title {
   font-size: 72px;
-  -webkit-text-stroke: 0.5px black;
+  /*-webkit-text-stroke: 0.5px black;*/
   /*text-shadow: 5px 5px black;*/
   color: rgb(117, 214, 195);
   font-weight: bold;
@@ -66,11 +67,11 @@ footer {
 .index-warning {
   color: #f07a60;
   /*margin-bottom: 100px;*/
-  padding-bottom: 200px;
-  padding-top: 140px;
-  padding-left: 140px;
-  padding-right: 100px;
-  border-bottom: 5px solid #ccc;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+  /*border-bottom: 5px solid #ccc;*/
   text-align: center
 }
 
