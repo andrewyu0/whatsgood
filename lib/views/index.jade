@@ -26,25 +26,25 @@ block content
           p Whatsgoodsf was powered by 
             a(href="https://www.kimonolabs.com/" target="_blank") Kimonolabs
             |, which recently shut down. We are working on getting our services back up, thanks for your patience!
-    .col-md-8.col-md-offset-2.col-xs-12(ng-repeat="venue in allVenues")      
-      .event-card(onclick="location.href='{{venue.data[0].url}}';")
-        .row
-          .col-sm-4.col-xs-4.img-container
-            img.venue-img(ng-src="{{venue.data[0].image}}" err-src="http://i.imgur.com/04pGPJ4.jpg")            
-          .col-sm-8.col-xs-8
-            .row 
-              .col-xs-12
-                .venue-name {{venue.collectionName}}              
-            .row
-              .col-xs-3
-                p ARTIST
-              .col-xs-9
-                {{venue.data[0].artist}}
-            .row(ng-hide="venue.data[0].date == null")
-              .col-xs-3
-                p DATE 
-              .col-xs-9
-                {{venue.data[0].date}}                  
+    //- .col-md-8.col-md-offset-2.col-xs-12(ng-repeat="venue in allVenues")      
+    //-   .event-card(onclick="location.href='{{venue.data[0].url}}';")
+    //-     .row
+    //-       .col-sm-4.col-xs-4.img-container
+    //-         img.venue-img(ng-src="{{venue.data[0].image}}" err-src="http://i.imgur.com/04pGPJ4.jpg")            
+    //-       .col-sm-8.col-xs-8
+    //-         .row 
+    //-           .col-xs-12
+    //-             .venue-name {{venue.collectionName}}              
+    //-         .row
+    //-           .col-xs-3
+    //-             p ARTIST
+    //-           .col-xs-9
+    //-             {{venue.data[0].artist}}
+    //-         .row(ng-hide="venue.data[0].date == null")
+    //-           .col-xs-3
+    //-             p DATE 
+    //-           .col-xs-9
+    //-             {{venue.data[0].date}}                  
             //- .row(ng-hide="venue.data[0].priceTime == null")
             //-   .col-xs-3
             //-     p INFO
